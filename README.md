@@ -8,15 +8,25 @@ Main focus was supporting `docker logs -f ID`
 If you want to retain logs and download history your nzbget.conf file should look like:
 
 MainDir=/opt/nzbget
+
 DestDir=/mnt/Plex/NZB/dst
+
 InterDir=/mnt/Plex/NZB/inter
+
 NzbDir=/mnt/Plex/NZB/nzb
+
 QueueDir=/mnt/Plex/NZB/queue
+
 TempDir=/mnt/Plex/NZB/tmp
+
 WebDir=/opt/nzbget/webui
+
 ScriptDir=/opt/nzbget/scripts
+
 LockFile=${MainDir}/nzbget.lock
+
 LogFile=/mnt/Plex/NZB/nzbget.log
+
 ConfigTemplate=/opt/nzbget/nzbget.conf
 
 
