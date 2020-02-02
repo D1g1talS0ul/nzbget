@@ -1,0 +1,23 @@
+# to add new server http://192.168.1.10:32400/manage/index.html#!/setup
+version: '3.5'
+services:
+ nzbget:
+   image: mine/nzbget:21 
+   container_name: nzbget-21
+   restart: unless-stopped
+   ports:
+     - 6789:6789/tcp
+   environment:
+     - PUID=1000
+     - PGID=1000
+     - TZ=US/Mountain
+   hostname: nzbget
+   volumes:
+     - /mnt/Plex:/mnt/Plex
+     - /mnt/Plex3:/mnt/Plex3
+     - /mnt/movies:/mnt/movies
+     - /mnt/Plex3/anime:/mnt/Plex3/anime
+   build:
+     context: .
+     shm_size: '1gb'
+   shm_size: '1gb'
