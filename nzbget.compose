@@ -8,6 +8,7 @@ services:
    ports:
      - 6789:6789/tcp
    environment:
+     - UMASK=002
      - PUID=1000
      - PGID=1000
      - TZ=US/Mountain
